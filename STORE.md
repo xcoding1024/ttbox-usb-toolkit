@@ -16,6 +16,8 @@ Bundle id stays `com.coding1024.tesla-toolkit`. English display name is **TTbox 
 
 Reserved in Partner Center / App Store Connect. Publisher `CN=` is copied from Partner Center. Do not invent a certificate Subject.
 
+Public product pages: [Microsoft Store](https://apps.microsoft.com/detail/9NJXSRQ51R1W) · [Mac App Store](https://apps.apple.com/app/id6811606662). These are the store listings, not the Partner Center or App Store Connect consoles.
+
 | Field | Value |
 | --- | --- |
 | Microsoft Store ID | `9NJXSRQ51R1W` |
