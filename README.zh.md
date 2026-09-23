@@ -21,7 +21,7 @@
 
 商店版通过各自商店更新，不含应用内 GitHub 更新。
 
-**也可下载：** [GitHub Releases](https://github.com/xcoding1024/tesla-usb-toolkit/releases/latest) 上的安装包（Windows 为 x64 的 `.msi` 或 NSIS `.exe`，macOS 为 Apple Silicon 与 Intel 的 `.dmg`）。GitHub 构建为临时签名或未签名，Gatekeeper 或 SmartScreen 可能发出警告。若 macOS 提示无法打开，请在「隐私与安全性」中允许。GitHub 版可在 **设置 → 版本更新** 中检查 Releases，并下载对应安装包。
+**也可下载：** [GitHub Releases](https://github.com/xcoding1024/ttbox-usb-toolkit/releases/latest) 上的安装包（Windows 为 x64 的 `.msi` 或 NSIS `.exe`，macOS 为 Apple Silicon 与 Intel 的 `.dmg`）。GitHub 构建为临时签名或未签名，Gatekeeper 或 SmartScreen 可能发出警告。若 macOS 提示无法打开，请在「隐私与安全性」中允许。GitHub 版可在 **设置 → 版本更新** 中检查 Releases，并下载对应安装包。
 
 ## 状态
 
@@ -60,8 +60,8 @@ MVP 已可用。维护者：**JiaXiang Huang**。
 ## 快速开始
 
 ```bash
-git clone https://github.com/xcoding1024/tesla-usb-toolkit.git
-cd tesla-usb-toolkit
+git clone https://github.com/xcoding1024/ttbox-usb-toolkit.git
+cd ttbox-usb-toolkit
 npm install
 ```
 
@@ -155,4 +155,4 @@ Copyright © 2026 JiaXiang Huang.
 ## 维护者
 
 - JiaXiang Huang
-- 仓库：https://github.com/xcoding1024/tesla-usb-toolkit
+- 仓库：https://github.com/xcoding1024/ttbox-usb-toolkit

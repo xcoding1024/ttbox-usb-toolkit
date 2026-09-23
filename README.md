@@ -19,7 +19,7 @@ The UI is a dark glass sidebar (Overview, Format, Dashcam, Light Show, Wraps, Lo
 
 Store builds update through the store (no in-app GitHub updater).
 
-**Also available:** installers on [GitHub Releases](https://github.com/xcoding1024/tesla-usb-toolkit/releases/latest) (Windows `.msi` or NSIS `.exe` for x64, macOS `.dmg` for Apple Silicon and Intel). GitHub builds are ad-hoc signed or unsigned; Gatekeeper or SmartScreen may warn. If Gatekeeper blocks the macOS app, allow it in **Privacy & Security**. The GitHub build can check Releases from **Settings → Updates** and download the matching installer.
+**Also available:** installers on [GitHub Releases](https://github.com/xcoding1024/ttbox-usb-toolkit/releases/latest) (Windows `.msi` or NSIS `.exe` for x64, macOS `.dmg` for Apple Silicon and Intel). GitHub builds are ad-hoc signed or unsigned; Gatekeeper or SmartScreen may warn. If Gatekeeper blocks the macOS app, allow it in **Privacy & Security**. The GitHub build can check Releases from **Settings → Updates** and download the matching installer.
 
 ## Status
 
@@ -58,8 +58,8 @@ MVP is usable. Maintainer: **JiaXiang Huang**.
 ## Getting started
 
 ```bash
-git clone https://github.com/xcoding1024/tesla-usb-toolkit.git
-cd tesla-usb-toolkit
+git clone https://github.com/xcoding1024/ttbox-usb-toolkit.git
+cd ttbox-usb-toolkit
 npm install
 ```
 
@@ -153,4 +153,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Commit messages must be in **English**. 
 ## Maintainers
 
 - JiaXiang Huang
-- Repository: https://github.com/xcoding1024/tesla-usb-toolkit
+- Repository: https://github.com/xcoding1024/ttbox-usb-toolkit
