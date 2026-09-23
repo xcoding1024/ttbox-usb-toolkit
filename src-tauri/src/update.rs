@@ -19,15 +19,15 @@ use tauri::{AppHandle, Emitter};
 use tauri_plugin_opener::OpenerExt;
 
 #[cfg(not(feature = "store-channel"))]
-const GITHUB_REPO: &str = "xcoding1024/tesla-usb-toolkit";
+const GITHUB_REPO: &str = "xcoding1024/ttbox-usb-toolkit";
 #[cfg(not(feature = "store-channel"))]
 const LATEST_RELEASE_URL: &str =
-    "https://api.github.com/repos/xcoding1024/tesla-usb-toolkit/releases/latest";
+    "https://api.github.com/repos/xcoding1024/ttbox-usb-toolkit/releases/latest";
 #[cfg(not(feature = "store-channel"))]
-const ATOM_URL: &str = "https://github.com/xcoding1024/tesla-usb-toolkit/releases.atom";
+const ATOM_URL: &str = "https://github.com/xcoding1024/ttbox-usb-toolkit/releases.atom";
 const DOWNLOAD_PREFIX: &str =
-    "https://github.com/xcoding1024/tesla-usb-toolkit/releases/download/";
-const RELEASE_PAGE_PREFIX: &str = "https://github.com/xcoding1024/tesla-usb-toolkit";
+    "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/download/";
+const RELEASE_PAGE_PREFIX: &str = "https://github.com/xcoding1024/ttbox-usb-toolkit";
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -287,7 +287,7 @@ mod tests {
     #[test]
     fn allows_only_this_repo_download_urls() {
         assert!(is_allowed_download_url(
-            "https://github.com/xcoding1024/tesla-usb-toolkit/releases/download/v0.1.0/app.dmg"
+            "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/download/v0.1.0/app.dmg"
         ));
         assert!(!is_allowed_download_url("https://evil.example/app.dmg"));
     }

@@ -319,7 +319,7 @@ async function main() {
   });
 
   const stopServer = await ensureDevServer();
-  const workDir = join(tmpdir(), "tesla-usb-toolkit-promo");
+  const workDir = join(tmpdir(), "ttbox-usb-toolkit-promo");
   await rm(workDir, { recursive: true, force: true });
   await mkdir(workDir, { recursive: true });
   await mkdir(join(root, "docs", "promo"), { recursive: true });

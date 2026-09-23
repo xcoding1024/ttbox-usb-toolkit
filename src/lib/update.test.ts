@@ -49,7 +49,7 @@ function release(overrides: Partial<GithubRelease> = {}): GithubRelease {
     tag_name: "v0.2.0",
     name: "TTbox USB Toolkit v0.2.0",
     body: "Bug fixes",
-    html_url: "https://github.com/xcoding1024/tesla-usb-toolkit/releases/tag/v0.2.0",
+    html_url: "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/tag/v0.2.0",
     prerelease: false,
     draft: false,
     assets,
@@ -150,7 +150,7 @@ describe("evaluateRelease", () => {
       <feed>
         <entry>
           <id>tag:github.com,2008:Repository/1/v0.2.0</id>
-          <link rel="alternate" href="https://github.com/xcoding1024/tesla-usb-toolkit/releases/tag/v0.2.0"/>
+          <link rel="alternate" href="https://github.com/xcoding1024/ttbox-usb-toolkit/releases/tag/v0.2.0"/>
           <title>TTbox USB Toolkit v0.2.0</title>
           <content type="html">&lt;p&gt;Bug fixes&lt;/p&gt;</content>
         </entry>

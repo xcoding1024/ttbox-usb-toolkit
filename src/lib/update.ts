@@ -1,6 +1,6 @@
 import { bundledDistributionChannel, githubUpdatesEnabled, type DistributionChannel } from "./channel";
 
-export const GITHUB_REPO = "xcoding1024/tesla-usb-toolkit";
+export const GITHUB_REPO = "xcoding1024/ttbox-usb-toolkit";
 export const GITHUB_RELEASES_LATEST_API = `https://api.github.com/repos/${GITHUB_REPO}/releases/latest`;
 export const GITHUB_RELEASES_ATOM = `https://github.com/${GITHUB_REPO}/releases.atom`;
 export const GITHUB_RELEASES_PAGE = `https://github.com/${GITHUB_REPO}/releases/latest`;

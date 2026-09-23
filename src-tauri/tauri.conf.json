@@ -36,7 +36,7 @@
     "publisher": "coding1024",
     "category": "Utility",
     "copyright": "Copyright © 2026 JiaXiang Huang",
-    "homepage": "https://github.com/xcoding1024/tesla-usb-toolkit",
+    "homepage": "https://github.com/xcoding1024/ttbox-usb-toolkit",
     "license": "MIT",
     "shortDescription": "Scan and format USB drives for Tesla vehicles.",
     "longDescription": "Desktop helper that scans TeslaCam clips, Light Shows, wraps, and lock chimes on a USB drive, then formats removable disks safely for in-car use. Not affiliated with Tesla, Inc.",
