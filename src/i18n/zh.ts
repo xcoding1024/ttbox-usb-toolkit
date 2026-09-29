@@ -53,6 +53,11 @@ export const zh = {
     scanTitle: "当前盘扫描摘要",
     scanWaiting: "选择或插入 U 盘后会自动扫描，无需手动开始检测。",
     rulesHint: "格式与内容规则可在设置中查看。",
+    mobileAppTitle: "TTbox 应用",
+    mobileAppBody: "在手机上设计贴纸、锁车音效和灯光秀，再把文件拷到这张 U 盘。",
+    mobileAppAlt: "TTbox 应用在手机上预览贴纸",
+    appStore: "App Store",
+    googlePlay: "Google Play",
   },
   drive: {
     current: "当前目标盘",

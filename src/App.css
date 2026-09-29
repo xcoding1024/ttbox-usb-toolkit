@@ -221,10 +221,40 @@ h3 {
   font-size: 16px;
 }
 
-.hero-actions {
+.hero-actions,
+.store-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.store-actions {
+  margin-top: 4px;
+}
+
+.store-actions .ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-app {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.2fr) minmax(220px, 0.8fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.mobile-app-shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  background: #05060a;
+}
+
+.mobile-app-copy p {
+  margin: 8px 0 16px;
 }
 
 .usb-hero {
@@ -1006,7 +1036,8 @@ a.ghost {
     padding-left: 8px;
   }
 
-  .hero {
+  .hero,
+  .mobile-app {
     grid-template-columns: 1fr;
   }
 

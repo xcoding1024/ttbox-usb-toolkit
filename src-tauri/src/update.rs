@@ -13,9 +13,9 @@ use std::time::Duration;
 
 #[cfg(not(feature = "store-channel"))]
 use futures_util::StreamExt;
+use tauri::AppHandle;
 #[cfg(not(feature = "store-channel"))]
-use tauri::{AppHandle, Emitter};
-#[cfg(not(feature = "store-channel"))]
+use tauri::Emitter;
 use tauri_plugin_opener::OpenerExt;
 
 #[cfg(not(feature = "store-channel"))]
@@ -28,6 +28,9 @@ const ATOM_URL: &str = "https://github.com/xcoding1024/ttbox-usb-toolkit/release
 const DOWNLOAD_PREFIX: &str =
     "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/download/";
 const RELEASE_PAGE_PREFIX: &str = "https://github.com/xcoding1024/ttbox-usb-toolkit";
+const TTBOX_APP_STORE_URL: &str = "https://apps.apple.com/app/ttbox/id6757570385";
+const TTBOX_GOOGLE_PLAY_URL: &str =
+    "https://play.google.com/store/apps/details?id=com.coding1024.ttbox";
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -100,6 +103,10 @@ pub fn is_allowed_download_url(url: &str) -> bool {
 
 pub fn is_allowed_release_url(url: &str) -> bool {
     url.starts_with(RELEASE_PAGE_PREFIX)
+}
+
+pub fn is_allowed_external_url(url: &str) -> bool {
+    url == TTBOX_APP_STORE_URL || url == TTBOX_GOOGLE_PLAY_URL || is_allowed_release_url(url)
 }
 
 pub fn sanitize_installer_filename(name: &str) -> Result<String, String> {
@@ -249,10 +256,9 @@ pub fn open_update_installer(app: AppHandle, path: String) -> Result<(), String>
         .map_err(|err| err.to_string())
 }
 
-#[cfg(not(feature = "store-channel"))]
 #[tauri::command]
 pub fn open_external_url(app: AppHandle, url: String) -> Result<(), String> {
-    if !is_allowed_release_url(&url) {
+    if !is_allowed_external_url(&url) {
         return Err("invalid_url".into());
     }
     app.opener()
@@ -290,6 +296,20 @@ mod tests {
             "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/download/v0.1.0/app.dmg"
         ));
         assert!(!is_allowed_download_url("https://evil.example/app.dmg"));
+    }
+
+    #[test]
+    fn allows_ttbox_store_pages_and_rejects_other_hosts() {
+        assert!(is_allowed_external_url(TTBOX_APP_STORE_URL));
+        assert!(is_allowed_external_url(TTBOX_GOOGLE_PLAY_URL));
+        assert!(is_allowed_external_url(
+            "https://github.com/xcoding1024/ttbox-usb-toolkit/releases/latest"
+        ));
+        assert!(!is_allowed_external_url("https://apps.apple.com/app/other/id1"));
+        assert!(!is_allowed_external_url(
+            "https://play.google.com/store/apps/details?id=com.example.other"
+        ));
+        assert!(!is_allowed_external_url("https://evil.example/app"));
     }
 
     #[test]

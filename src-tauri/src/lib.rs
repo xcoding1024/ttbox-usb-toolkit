@@ -79,7 +79,8 @@ pub fn run() {
             preview_format,
             format_volume,
             eject_volume,
-            update::app_info
+            update::app_info,
+            update::open_external_url
         ]);
 
     builder

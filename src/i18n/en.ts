@@ -55,6 +55,12 @@ export const en: Messages = {
     scanTitle: "Scan summary",
     scanWaiting: "Select or insert a USB drive to scan automatically. No manual start is required.",
     rulesHint: "Format and content rules are in Settings.",
+    mobileAppTitle: "TTbox app",
+    mobileAppBody:
+      "Design wraps, lock sounds, and light shows on your phone, then copy the files onto this USB drive.",
+    mobileAppAlt: "TTbox app showing a live wrap preview on a phone",
+    appStore: "App Store",
+    googlePlay: "Google Play",
   },
   drive: {
     current: "Current target",
